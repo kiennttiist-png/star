@@ -93,36 +93,16 @@ body {
   animation: fadeUp 0.6s ease forwards;
 }
 
-.fade-up:nth-child(1) {
-  animation-delay: 0.1s;
-}
-.fade-up:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.fade-up:nth-child(3) {
-  animation-delay: 0.3s;
-}
-.fade-up:nth-child(4) {
-  animation-delay: 0.4s;
-}
-.fade-up:nth-child(5) {
-  animation-delay: 0.5s;
-}
-.fade-up:nth-child(6) {
-  animation-delay: 0.6s;
-}
-.fade-up:nth-child(7) {
-  animation-delay: 0.7s;
-}
-.fade-up:nth-child(8) {
-  animation-delay: 0.8s;
-}
-.fade-up:nth-child(9) {
-  animation-delay: 0.9s;
-}
-.fade-up:nth-child(10) {
-  animation-delay: 1s;
-}
+.fade-up:nth-child(1) { animation-delay: 0.1s; }
+.fade-up:nth-child(2) { animation-delay: 0.2s; }
+.fade-up:nth-child(3) { animation-delay: 0.3s; }
+.fade-up:nth-child(4) { animation-delay: 0.4s; }
+.fade-up:nth-child(5) { animation-delay: 0.5s; }
+.fade-up:nth-child(6) { animation-delay: 0.6s; }
+.fade-up:nth-child(7) { animation-delay: 0.7s; }
+.fade-up:nth-child(8) { animation-delay: 0.8s; }
+.fade-up:nth-child(9) { animation-delay: 0.9s; }
+.fade-up:nth-child(10) { animation-delay: 1s; }
 
 /* ============================================
    HEADER
@@ -1017,11 +997,15 @@ blockquote {
 }
 
 /* ============================================
-   RESPONSIVE DESIGN
+   RESPONSIVE DESIGN - TABLET (768px - 1024px)
    ============================================ */
-
-/* Tablet (768px - 1024px) */
 @media (max-width: 1024px) {
+  /* Header */
+  .logo {
+    font-size: 28px;
+    letter-spacing: 2px;
+  }
+
   .header-title {
     font-size: 36px;
   }
@@ -1030,22 +1014,69 @@ blockquote {
     font-size: 16px;
   }
 
-  .section-title {
-    font-size: 32px;
+  /* Breaking News */
+  .breaking-news-content {
+    padding: 0 15px;
+  }
+
+  /* Hero */
+  .slider-item {
+    height: 400px;
   }
 
   .hero-title h1 {
     font-size: 36px;
   }
 
+  /* Sections */
+  section {
+    padding: 60px 15px;
+  }
+
+  .section-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .section-title::after {
+    width: 60px;
+  }
+
+  /* Profile Cards */
+  .profile-cards {
+    gap: 20px;
+  }
+
+  .profile-card {
+    padding: 25px;
+  }
+
+  /* News Article */
   .article-headline {
     font-size: 28px;
   }
 
+  /* Interview */
   .interview-container {
     grid-template-columns: 1fr;
+    gap: 30px;
   }
 
+  .interview-quote,
+  .interview-commentary {
+    padding: 30px;
+  }
+
+  blockquote {
+    font-size: 24px;
+  }
+
+  /* Fame Indices */
+  .fame-indices-container {
+    gap: 30px;
+  }
+
+  /* Timeline */
   .timeline::before {
     left: 20px;
   }
@@ -1055,53 +1086,79 @@ blockquote {
     margin-left: 0;
     margin-right: 0;
     text-align: left;
-    padding-left: 60px;
+    padding-left: 50px;
+    padding-right: 0;
   }
 
   .timeline-dot {
     left: 12px;
   }
 
-  section {
-    padding: 60px 20px;
+  /* Footer */
+  .footer-content {
+    gap: 30px;
   }
 }
 
-/* Mobile (< 768px) */
+/* ============================================
+   RESPONSIVE DESIGN - MOBILE (< 768px)
+   ============================================ */
 @media (max-width: 768px) {
+  /* Header */
   .header {
-    padding: 40px 20px;
+    padding: 40px 15px;
   }
 
   .logo {
-    font-size: 24px;
-    margin-bottom: 15px;
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
   }
 
   .header-title {
-    font-size: 28px;
+    font-size: 26px;
     margin-bottom: 10px;
   }
 
   .header-subtitle {
-    font-size: 14px;
+    font-size: 13px;
+  }
+
+  /* Breaking News */
+  .breaking-news {
+    padding: 0;
   }
 
   .breaking-news-content {
     height: auto;
-    padding: 12px 15px;
-    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 8px;
   }
 
   .breaking-label {
-    font-size: 12px;
-    white-space: normal;
+    font-size: 11px;
+    order: 1;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .marquee-container {
+    order: 2;
+    width: 100%;
+    height: 35px;
   }
 
   .marquee-text {
-    font-size: 12px;
+    font-size: 11px;
   }
 
+  .marquee {
+    animation: marquee 35s linear infinite;
+  }
+
+  /* Hero */
   .hero {
     padding: 40px 15px;
   }
@@ -1116,198 +1173,10 @@ blockquote {
   }
 
   .hero-subtitle {
-    font-size: 16px;
-  }
-
-  section {
-    padding: 40px 15px;
-  }
-
-  .section-title {
-    font-size: 24px;
-    margin-bottom: 30px;
-  }
-
-  .profile-cards {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .profile-card {
-    padding: 20px;
-  }
-
-  .profile-card-value {
-    font-size: 18px;
-  }
-
-  .news-article {
-    padding: 25px;
-  }
-
-  .article-date {
-    font-size: 12px;
-  }
-
-  .article-headline {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-
-  .article-content {
     font-size: 15px;
   }
 
-  .interview-container {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-
-  .interview-quote,
-  .interview-commentary {
-    padding: 25px;
-  }
-
-  blockquote {
-    font-size: 22px;
-  }
-
-  .commentary-title {
-    font-size: 16px;
-  }
-
-  .interview-commentary p {
-    font-size: 14px;
-  }
-
-  .fame-indices-container {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-
-  .factcheck-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .investigation-checklist {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .checklist-item {
-    padding: 15px;
-  }
-
-  .science-content {
-    padding: 25px;
-  }
-
-  .science-content p {
-    font-size: 15px;
-  }
-
-  .timeline {
-    padding: 0;
-  }
-
-  .timeline::before {
-    left: 12px;
-  }
-
-  .timeline-event:nth-child(odd),
-  .timeline-event:nth-child(even) {
-    margin-left: 0;
-    margin-right: 0;
-    text-align: left;
-    padding-left: 50px;
-  }
-
-  .timeline-dot {
-    width: 14px;
-    height: 14px;
-    border-width: 2px;
-    top: 4px;
-    left: 6px;
-  }
-
-  .timeline-event {
-    margin-bottom: 30px;
-  }
-
-  .comment-item {
-    padding: 15px;
-    gap: 12px;
-  }
-
-  .comment-avatar {
-    width: 36px;
-    height: 36px;
-    font-size: 18px;
-  }
-
-  .comment-author {
-    font-size: 13px;
-  }
-
-  .comment-text {
-    font-size: 14px;
-  }
-
-  .comment-actions {
-    font-size: 12px;
-    gap: 15px;
-  }
-
-  .prediction-content {
-    padding: 25px;
-  }
-
-  .prediction-content p {
-    font-size: 15px;
-  }
-
-  .prediction-list li {
-    font-size: 14px;
-    margin-bottom: 12px;
-    padding-left: 25px;
-  }
-
-  .award-item {
-    padding: 25px;
-  }
-
-  .award-icon {
-    font-size: 48px;
-  }
-
-  .award-title {
-    font-size: 18px;
-  }
-
-  .award-recipient {
-    font-size: 16px;
-  }
-
-  .footer-content {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .footer-section h3 {
-    font-size: 16px;
-    margin-bottom: 12px;
-  }
-
-  .footer-section p {
-    font-size: 13px;
-  }
-
-  .footer-bottom p {
-    font-size: 12px;
-  }
-
-  /* Slider on mobile */
+  /* Slider Controls */
   .slick-prev,
   .slick-next {
     width: 40px;
@@ -1315,69 +1184,33 @@ blockquote {
   }
 
   .slick-dots {
-    bottom: 15px;
+    bottom: 12px;
   }
 
-  .slick-dots li button:before {
-    font-size: 8px;
-  }
-}
-
-/* Small Mobile (< 480px) */
-@media (max-width: 480px) {
-  .logo {
-    font-size: 20px;
-    letter-spacing: 2px;
-  }
-
-  .header-title {
-    font-size: 22px;
-    letter-spacing: 1px;
-  }
-
-  .header-subtitle {
-    font-size: 13px;
-  }
-
-  .breaking-news-content {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-
-  .breaking-label {
-    width: 100%;
-    text-align: center;
-  }
-
-  .marquee-container {
-    width: 100%;
-    height: 40px;
-  }
-
-  .marquee {
-    animation: marquee 30s linear infinite;
-  }
-
-  .marquee-text {
-    font-size: 11px;
-  }
-
-  .slider-item {
-    height: 250px;
-  }
-
-  .hero-title h1 {
-    font-size: 20px;
+  /* Sections */
+  section {
+    padding: 40px 12px;
   }
 
   .section-title {
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .section-title::after {
+    width: 50px;
+    height: 3px;
+  }
+
+  /* Profile Cards */
+  .profile-cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .profile-card {
-    padding: 15px;
+    padding: 18px;
+    border-left-width: 3px;
   }
 
   .profile-card-label {
@@ -1385,57 +1218,598 @@ blockquote {
   }
 
   .profile-card-value {
-    font-size: 16px;
+    font-size: 17px;
+  }
+
+  /* News Article */
+  .news-article {
+    padding: 20px;
+    border-top-width: 3px;
+  }
+
+  .article-date {
+    font-size: 12px;
+    margin-bottom: 10px;
   }
 
   .article-headline {
-    font-size: 18px;
+    font-size: 20px;
+    margin-bottom: 20px;
   }
 
   .article-content {
     font-size: 14px;
+    line-height: 1.8;
+  }
+
+  /* Interview */
+  .interview-section {
+    padding: 40px 12px;
+  }
+
+  .interview-container {
+    gap: 20px;
+  }
+
+  .interview-quote,
+  .interview-commentary {
+    padding: 20px;
   }
 
   blockquote {
-    font-size: 18px;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .quote-attribution {
+    font-size: 12px;
+  }
+
+  .commentary-title {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .interview-commentary p {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  /* Fame Indices */
+  .fame-indices-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .fame-index-label {
+    font-size: 15px;
+  }
+
+  .progress-text {
+    font-size: 10px;
+  }
+
+  /* Factcheck */
+  .factcheck-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .factcheck-item {
+    padding: 20px;
+    border-top-width: 3px;
+  }
+
+  .factcheck-label {
+    font-size: 11px;
+  }
+
+  .factcheck-item p {
+    font-size: 14px;
+  }
+
+  .factcheck-result p {
+    font-size: 16px;
+  }
+
+  /* Investigation Checklist */
+  .investigation-checklist {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .checklist-item {
-    padding: 12px;
-    gap: 10px;
+    padding: 15px;
+    gap: 12px;
   }
 
   .checkbox {
     font-size: 18px;
+    min-width: 20px;
   }
 
   .checklist-text {
     font-size: 14px;
   }
 
+  /* Science */
+  .science-section {
+    padding: 40px 12px;
+  }
+
+  .science-content {
+    padding: 20px;
+  }
+
+  .science-content p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .science-conclusion {
+    padding: 15px;
+  }
+
+  /* Timeline */
+  .timeline {
+    padding: 15px 0;
+  }
+
+  .timeline::before {
+    left: 10px;
+  }
+
   .timeline-event {
     margin-bottom: 25px;
   }
 
+  .timeline-event:nth-child(odd),
+  .timeline-event:nth-child(even) {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 0;
+  }
+
+  .timeline-dot {
+    width: 12px;
+    height: 12px;
+    border-width: 2px;
+    top: 3px;
+    left: 4px;
+  }
+
   .timeline-time {
     font-size: 14px;
+    margin-bottom: 6px;
   }
 
   .timeline-content {
+    font-size: 13px;
+  }
+
+  /* Comments */
+  .comments-section {
+    padding: 40px 12px;
+  }
+
+  .comments-list {
+    gap: 12px;
+  }
+
+  .comment-item {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .comment-avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .comment-author {
+    font-size: 12px;
+    margin-bottom: 3px;
+  }
+
+  .comment-text {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .comment-actions {
+    font-size: 11px;
+    gap: 12px;
+  }
+
+  /* Prediction */
+  .prediction-section {
+    padding: 40px 12px;
+  }
+
+  .prediction-content {
+    padding: 20px;
+  }
+
+  .prediction-content p {
     font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .prediction-list {
+    margin: 20px 0;
+  }
+
+  .prediction-list li {
+    font-size: 13px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+  }
+
+  .prediction-disclaimer {
+    font-size: 12px;
+    margin-top: 15px;
+  }
+
+  /* Awards */
+  .awards-section {
+    padding: 40px 12px;
+  }
+
+  .awards-container {
+    gap: 20px;
+  }
+
+  .award-item {
+    padding: 20px;
+    border-width: 2px;
   }
 
   .award-icon {
-    font-size: 40px;
+    font-size: 48px;
     margin-bottom: 15px;
   }
 
   .award-title {
-    font-size: 16px;
+    font-size: 18px;
+    margin-bottom: 12px;
   }
 
   .award-recipient {
+    font-size: 15px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 40px 15px 20px;
+    margin-top: 30px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+  }
+
+  .footer-section h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .footer-section p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .footer-bottom {
+    padding-top: 20px;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+    margin: 6px 0;
+  }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - SMALL MOBILE (< 480px)
+   ============================================ */
+@media (max-width: 480px) {
+  /* Header */
+  .header {
+    padding: 30px 10px;
+  }
+
+  .logo {
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+
+  .header-title {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .header-subtitle {
+    font-size: 12px;
+  }
+
+  /* Breaking News */
+  .breaking-news-content {
+    padding: 8px;
+    height: auto;
+  }
+
+  .breaking-label {
+    font-size: 10px;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .marquee-container {
+    width: 100%;
+    height: 30px;
+  }
+
+  .marquee-text {
+    font-size: 10px;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 30px 10px;
+  }
+
+  .slider-item {
+    height: 220px;
+  }
+
+  .hero-title h1 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .hero-subtitle {
+    font-size: 13px;
+  }
+
+  /* Slider */
+  .slick-prev,
+  .slick-next {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .slick-dots li button:before {
+    font-size: 7px;
+  }
+
+  /* Sections */
+  section {
+    padding: 30px 10px;
+  }
+
+  .section-title {
+    font-size: 19px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+  }
+
+  .section-title::after {
+    width: 40px;
+    height: 3px;
+  }
+
+  /* Profile Cards */
+  .profile-cards {
+    gap: 10px;
+  }
+
+  .profile-card {
+    padding: 15px;
+  }
+
+  .profile-card-label {
+    font-size: 10px;
+  }
+
+  .profile-card-value {
+    font-size: 15px;
+  }
+
+  /* News Article */
+  .news-article {
+    padding: 15px;
+  }
+
+  .article-date {
+    font-size: 11px;
+  }
+
+  .article-headline {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .article-content {
+    font-size: 13px;
+  }
+
+  /* Interview */
+  .interview-container {
+    gap: 15px;
+  }
+
+  .interview-quote,
+  .interview-commentary {
+    padding: 15px;
+  }
+
+  blockquote {
+    font-size: 18px;
+  }
+
+  .commentary-title {
     font-size: 14px;
+  }
+
+  .interview-commentary p {
+    font-size: 13px;
+  }
+
+  /* Fame Indices */
+  .fame-indices-container {
+    gap: 20px;
+  }
+
+  .fame-index-label {
+    font-size: 14px;
+  }
+
+  /* Factcheck */
+  .factcheck-item {
+    padding: 15px;
+  }
+
+  .factcheck-label {
+    font-size: 10px;
+  }
+
+  .factcheck-item p {
+    font-size: 13px;
+  }
+
+  /* Checklist */
+  .checklist-item {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .checkbox {
+    font-size: 16px;
+  }
+
+  .checklist-text {
+    font-size: 13px;
+  }
+
+  /* Science */
+  .science-content {
+    padding: 15px;
+  }
+
+  .science-content p {
+    font-size: 13px;
+  }
+
+  /* Timeline */
+  .timeline-dot {
+    width: 10px;
+    height: 10px;
+    border-width: 2px;
+    top: 2px;
+    left: 3px;
+  }
+
+  .timeline-time {
+    font-size: 12px;
+  }
+
+  .timeline-content {
+    font-size: 12px;
+  }
+
+  /* Comments */
+  .comment-item {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .comment-avatar {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .comment-author {
+    font-size: 11px;
+  }
+
+  .comment-text {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  .comment-actions {
+    font-size: 10px;
+    gap: 10px;
+  }
+
+  /* Prediction */
+  .prediction-content {
+    padding: 15px;
+  }
+
+  .prediction-content p {
+    font-size: 13px;
+  }
+
+  .prediction-list li {
+    font-size: 12px;
+    padding-left: 18px;
+    margin-bottom: 8px;
+  }
+
+  /* Awards */
+  .award-item {
+    padding: 15px;
+  }
+
+  .award-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  .award-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .award-recipient {
+    font-size: 13px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 30px 10px 15px;
+    margin-top: 20px;
+  }
+
+  .footer-content {
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .footer-section h3 {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .footer-section p {
+    font-size: 12px;
+  }
+
+  .footer-bottom {
+    padding-top: 15px;
+  }
+
+  .footer-bottom p {
+    font-size: 11px;
+    margin: 5px 0;
   }
 }
 
@@ -1443,7 +1817,6 @@ blockquote {
    ADDITIONAL ENHANCEMENTS
    ============================================ */
 
-/* Glassmorphism effect on cards */
 @supports (backdrop-filter: blur(10px)) {
   .interview-quote,
   .interview-commentary,
@@ -1452,7 +1825,6 @@ blockquote {
   }
 }
 
-/* Smooth scrolling for links */
 a {
   color: var(--primary-red);
   text-decoration: none;
@@ -1464,7 +1836,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Print styles */
 @media print {
   .breaking-news,
   .footer {
